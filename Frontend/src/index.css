@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+}
+
+.scroll-bar-container {
+    overflow-y: auto; 
+    overflow-x: hidden;
+    
+    scrollbar-gutter: stable; 
+
+    --scrollbar-color: #4eff4e20; 
+    transition: --scrollbar-color 0.3s;
+}
+
+
+.scroll-bar-container:hover {
+    --scrollbar-color: #4eff4e60;
+}
+
+/* Webkit Scrollbar Styling */
+.scroll-bar-container::-webkit-scrollbar {
+    width: 8px; /* 8px is a sweet spot for clickability */
+}
+
+.scroll-bar-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-bar-container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 20px;
+    /* This creates the 'floating' effect within the 8px gutter */
+    border: 2px solid transparent; 
+    background-clip: content-box;
+}
+
+.scroll-bar-container::-webkit-scrollbar-thumb:hover {
+    background-color: #4eff4e;
+    box-shadow: 0 0 10px #4eff4e80;
+}
+
+.scroll-bar-container::-webkit-scrollbar-button {
+    display: none;
+}
