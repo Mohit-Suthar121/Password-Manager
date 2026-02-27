@@ -1,0 +1,1 @@
+This is a simple password manager, built in MERN stack to practice CRUD operations
